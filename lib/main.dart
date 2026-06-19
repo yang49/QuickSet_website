@@ -14,9 +14,17 @@ class QuickSetWebsite extends StatelessWidget {
     return MaterialApp(
       title: 'QuickSet - Workout & Routine Tracker',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blueAccent,
-          brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF0D0D0D),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFF00CC6A),
+          surface: Color(0xFF1A1A1A),
+          onSurface: Color(0xFFF5F5F5),
+          onSurfaceVariant: Color(0xFF999999),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0D0D0D),
+          foregroundColor: Color(0xFFF5F5F5),
+          elevation: 0,
         ),
         useMaterial3: true,
       ),
