@@ -35,7 +35,9 @@ class MarketingPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(24),
                       boxShadow: [
                         BoxShadow(
-                          color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.primary.withOpacity(0.3),
                           blurRadius: 20,
                           offset: const Offset(0, 10),
                         ),
@@ -50,9 +52,9 @@ class MarketingPage extends StatelessWidget {
                   Text(
                     'QuickSet',
                     style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 16),
@@ -68,20 +70,20 @@ class MarketingPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 48),
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      // TODO: Add App Store Link
-                    },
-                    icon: const Icon(Icons.apple),
-                    label: const Text('Download on the App Store'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Theme.of(context).colorScheme.primary,
-                      foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    ),
-                  ),
+                  // ElevatedButton.icon(
+                  //   onPressed: () {
+                  //     // TODO: Add App Store Link
+                  //   },
+                  //   icon: const Icon(Icons.apple),
+                  //   label: const Text('Download on the App Store'),
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Theme.of(context).colorScheme.primary,
+                  //     foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  //     padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  //     textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  //   ),
+                  // ),
                   const SizedBox(height: 80),
                   const _FeatureList(),
                 ],
@@ -105,17 +107,20 @@ class _FeatureList extends StatelessWidget {
         _FeatureItem(
           icon: Icons.flash_on,
           title: 'Lightning-Fast Logging',
-          description: 'Easily record your sets, reps, and weights during your workout with our streamlined interface.',
+          description:
+              'Easily record your sets, reps, and weights during your workout with our streamlined interface.',
         ),
         _FeatureItem(
           icon: Icons.calendar_today,
           title: 'Flexible Routines',
-          description: 'Create custom workout plans that fit your life. Schedule workouts on specific days of the week or build flexible, rotating schedules.',
+          description:
+              'Create custom workout plans that fit your life. Schedule workouts on specific days of the week or build flexible, rotating schedules.',
         ),
         _FeatureItem(
           icon: Icons.trending_up,
           title: 'Progress & History',
-          description: 'Look back at your past workouts with a comprehensive history log. Track your exercise progress over time to ensure you are consistently applying progressive overload.',
+          description:
+              'Look back at your past workouts with a comprehensive history log. Track your exercise progress over time to ensure you are consistently applying progressive overload.',
         ),
       ],
     );
@@ -148,13 +153,12 @@ class _FeatureItem extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  description,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
+                Text(description, style: Theme.of(context).textTheme.bodyLarge),
               ],
             ),
           ),
